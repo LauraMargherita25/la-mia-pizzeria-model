@@ -3,7 +3,7 @@
 }
 
 
-@model List<Pizza>
+@model List<Pizza>;
 <div class="text-center">
 
     <div class="row">
@@ -24,7 +24,9 @@
                 @foreach (Pizza pizza in Model)
                 {
                     <div class="card w-25">
-                        <img src="@pizza.Img" class="card-img-top" alt="card-img-top">
+                        <a asp-controller="Pizza", asp-action="Detail", asp-route-id="@pizza.Id">
+                            <img src="@pizza.Img" class="card-img-top" alt="card-img-top">
+                        </a>
               
                         <div class="card-body">
                             <h2 class="card-title">@pizza.Name</h2>
