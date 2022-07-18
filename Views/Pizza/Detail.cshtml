@@ -1,8 +1,11 @@
 ﻿@model Pizza
+@{
+    ViewData["Title"] = @Model.Name;
+}
 
-<ul>
-    <li>@Model.Id</li>
-    <li>@Model.Name</li>
-    <li><img src="/@Model.Img"/></li>
-    <li>@Model.Price</li>
-</ul>
+    
+    <h2>@Model.Name</h2>
+    <img src="/@Model.Img"/>
+    <p>@Model.Description</p>
+    <p>@Model.Price $</p>
+
